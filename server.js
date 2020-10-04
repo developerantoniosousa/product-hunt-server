@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors("*"));
 
-mongoose.connect("mongodb://localhost:27017/product-hunt", {
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
 });
 require("./src/models/Product");
