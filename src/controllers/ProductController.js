@@ -15,4 +15,12 @@ module.exports = {
     const product = await Product.create(request.body);
     return response.json(product);
   },
+  async update(request, response) {
+    const product = await Product.findByIdAndUpdate(
+      request.params.id,
+      request.body,
+      { new: true }
+    );
+    return response.json(product);
+  },
 };
