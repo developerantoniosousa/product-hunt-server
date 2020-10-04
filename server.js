@@ -8,4 +8,6 @@ mongoose.connect("mongodb://localhost:27017/product-hunt", {
 });
 require("./src/models/Product");
 
+const Product = mongoose.model("Product");
+
 app.listen(3001);
