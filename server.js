@@ -10,4 +10,6 @@ require("./src/models/Product");
 
 const Product = mongoose.model("Product");
 
+app.use("/api", require("./src/routes"));
+
 app.listen(3001);
